@@ -29,6 +29,9 @@ if !has("compatible")
     " vim table mode
     Plug 'dhruvasagar/vim-table-mode'
 
+    " toml
+    Plug 'cespare/vim-toml', {'branch': 'main'}
+
     " Initialize plugin system
     call plug#end()
 endif
