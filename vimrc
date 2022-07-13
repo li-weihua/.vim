@@ -113,7 +113,7 @@ noremap <C-L> <C-W><C-L>
 noremap <C-H> <C-W><C-H>
 
 function FormatBuffer()
-  if &modified && !empty(findfile('.clang-format', expand('%:p:h') . ';'))
+  if &modified && !empty(findfile('.clang-format', expand('%:p:h') . ';')) && executable('clang-format')
     let cursor_pos = getpos('.')
     :%!clang-format
     call setpos('.', cursor_pos)
